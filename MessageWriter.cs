@@ -1,3 +1,10 @@
+// Decompiled with JetBrains decompiler
+// Type: MessageWriter
+// Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+// MVID: B34C14AB-0760-406D-ABE6-62CD929EE8CE
+// Assembly location: D:\Download\folder\Chat Room_Data\Managed\Assembly-CSharp.dll
+// Compiler-generated code is shown
+
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -15,27 +22,28 @@ public class MessageWriter : MonoBehaviour
 
   private void Start()
   {
-    UsernameText = this.transform.GetChild(0).GetComponent<Text>();
-    MessageDisplay = this.transform.GetChild(1).GetComponent<Text>();
+    this.UsernameText = this.transform.GetChild(0).GetComponent<Text>();
+    this.MessageDisplay = this.transform.GetChild(1).GetComponent<Text>();
   }
 
   private void Update()
   {
-    UsernameText.text = this.username;
-    MessageDisplay.text = this.message;
-    if (CustomColour)
+    this.UsernameText.text = this.username;
+    this.MessageDisplay.text = this.message;
+    if (this.CustomColour)
     {
-      UsernameText.color = new Color(this.r[0], this.g[0], this.b[0], this.a[0]);
-      MessageDisplay.color = new Color(this.r[0], this.g[0], this.b[0], this.a[0]);
+      this.UsernameText.color = new Color(this.r[0], this.g[0], this.b[0], this.a[0]);
+      this.MessageDisplay.color = new Color(this.r[0], this.g[0], this.b[0], this.a[0]);
     }
-    Destroy(transform.GetComponent<MessageWriter>());
+    Object.Destroy((Object) this.transform.GetComponent<MessageWriter>());
   }
 
   public MessageWriter()
   {
-    r = new float[1]{ 213f };
-    g = new float[1]{ 231f };
-    b = new float[1]{ 52f };
-    a = new float[1]{ 1f };
+    this.r = new float[1]{ 213f };
+    this.g = new float[1]{ 231f };
+    this.b = new float[1]{ 52f };
+    this.a = new float[1]{ 1f };
+    base.\u002Ector();
   }
 }
