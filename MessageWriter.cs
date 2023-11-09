@@ -2,7 +2,7 @@
 // Type: MessageWriter
 // Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
 // MVID: B34C14AB-0760-406D-ABE6-62CD929EE8CE
-// Assembly location: D:\Download\folder\Chat Room_Data\Managed\Assembly-CSharp.dll
+// Assembly location: *//*
 // Compiler-generated code is shown
 
 using UnityEngine;
