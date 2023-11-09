@@ -11,15 +11,20 @@ public class Login : MonoBehaviour
 
   private void Start()
   {
-    LoginButton.onClick.AddListener(Login_Function));
+    // ISSUE: method pointer
+    this.LoginButton.onClick.AddListener(new UnityAction((object) this, __methodptr(Login_Function)));
   }
 
   private void Login_Function()
   {
-    WebSocketWorker.gameObject.SetActive(true);
-    Object.FindObjectOfType<WebSocketWorker>().Username = usernameInput.text;
-    NextPage.gameObject.SetActive(true);
-    transform.gameObject.SetActive(false);
+    this.WebSocketWorker.gameObject.SetActive(true);
+    Object.FindObjectOfType<global::WebSocketWorker>().Username = this.usernameInput.text;
+    this.NextPage.gameObject.SetActive(true);
+    this.transform.gameObject.SetActive(false);
   }
 
+  public Login()
+  {
+    base.\u002Ector();
+  }
 }
